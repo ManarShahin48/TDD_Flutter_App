@@ -4,7 +4,7 @@ import 'package:tdd_project/domain/trivia/entities/number_trivia.dart';
 import 'package:tdd_project/domain/trivia/repositories/number_trivia_repository.dart';
 
 import '../../../core/errors/exceptions.dart';
-import '../../../core/platform/internet_info.dart';
+import '../../../core/network/internet_info.dart';
 import '../datasource/number_trivia_local_data_source.dart';
 import '../datasource/number_trivia_remote_data_source.dart';
 import '../models/number_trivia_model.dart';
@@ -21,19 +21,6 @@ class NumberTriviaRepositoryImpl implements NumberTriviaRepository {
     required this.localDataSource,
     required this.networkInfo,
   });
-
-  // @override
-  // Future<Either<Failure, NumberTrivia>> getConcreteNumberTrivia(int number) async {
-  //   // TODO: implement getConcreteNumberTrivia
-  //   networkInfo.isConnected;
-  //   return const Right(NumberTriviaModel(text: '', number: 1));
-  // }
-  //
-  // @override
-  // Future<Either<Failure, NumberTrivia>> getRandomNumberTrivia() {
-  //   // TODO: implement getRandomNumberTrivia
-  //   throw UnimplementedError();
-  // }
 
   @override
   Future<Either<Failure, NumberTrivia>> getConcreteNumberTrivia(
